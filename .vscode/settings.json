@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "wakeUpNyow.sln"
+    "dotnet.defaultSolution": "wake-up-nyow.sln"
 }

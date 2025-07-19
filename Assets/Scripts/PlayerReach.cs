@@ -29,8 +29,11 @@ public class PlayerReach : MonoBehaviour
                 ko.knockOver(playerVelocity, direction);
             }
             // objectsInReach.Clear();
-            foreach(Interactable iobj in interactables) {
-                iobj.interact();
+            // foreach(Interactable iobj in interactables) {
+            //     iobj.interact();
+            // }
+            for(int i = 0; i < interactables.Count; i++) {
+                interactables[i].interact();
             }
         }
     }

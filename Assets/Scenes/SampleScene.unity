@@ -5184,6 +5184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fan: {fileID: 1464389547}
+  switchOnClip: {fileID: 8300000, guid: a5d893495a8767644b6830a23a9a2e6e, type: 3}
+  switchOffClip: {fileID: 8300000, guid: 02d80696a51420c488505c040268d8d2, type: 3}
 --- !u!1 &888088271
 GameObject:
   m_ObjectHideFlags: 0

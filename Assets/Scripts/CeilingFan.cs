@@ -6,6 +6,7 @@ public class CeilingFan : MonoBehaviour
 {
     private List<Rigidbody2D> rbs;
     [SerializeField] private Transform fanPos;
+    [SerializeField] private float fanStrength;
 
     private Animator animator;
     private string currentState;
@@ -22,7 +23,7 @@ public class CeilingFan : MonoBehaviour
     {
         foreach(Rigidbody2D rb in rbs) {
             float distance = Mathf.Abs(fanPos.position.y - rb.transform.position.y);
-            rb.AddForce(Vector2.down * (15 - distance), ForceMode2D.Force);
+            rb.AddForce(Vector2.down * (fanStrength - distance), ForceMode2D.Force);
         }
     }
 

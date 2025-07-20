@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Meter : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Meter : MonoBehaviour
     private bool awake = false;
     public Transform humanPos;
     [SerializeField] private GameObject bedWake;
+
+    private float winTimer = -1;
 
     void Awake() {
         if(instance == null) {
@@ -37,6 +40,16 @@ public class Meter : MonoBehaviour
         addValue(-decrement);
     }
 
+    void FixedUpdate()
+    {
+        if(winTimer > 0) {
+            winTimer -= Time.fixedDeltaTime;
+            if(winTimer <= 0) {
+                SceneManager.LoadSceneAsync("WinScreen");
+            }
+        }
+    }
+
     public void addValue(float increment) {
         if(!awake) {
             float newValue = slider.value + increment;
@@ -44,6 +57,7 @@ public class Meter : MonoBehaviour
                 newValue = MAX_VALUE;
                 awake = true;
                 bedWake.SetActive(true);
+                winTimer = 3;
             }
             else if(newValue < minValue) {
                 newValue = minValue;

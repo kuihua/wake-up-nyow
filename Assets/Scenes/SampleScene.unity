@@ -10222,7 +10222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2da9f6df959f8c4489ec9d650454c143, type: 2}
   m_sharedMaterial: {fileID: -5954113082381712372, guid: 2da9f6df959f8c4489ec9d650454c143, type: 2}
@@ -11487,9 +11487,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 462328962}
+  - {fileID: 996706807}
   - {fileID: 1133899778}
   - {fileID: 1377114719}
-  - {fileID: 996706807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

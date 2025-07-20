@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1725972066}
   humanPos: {fileID: 1641719811}
+  bedWake: {fileID: 0}
 --- !u!1 &177240864
 GameObject:
   m_ObjectHideFlags: 0

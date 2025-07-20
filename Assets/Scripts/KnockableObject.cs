@@ -8,6 +8,8 @@ public class KnockableObject : MonoBehaviour
     private Vector2 lastRecordedVelocity;
 
     [SerializeField] float hardnessValue = 1;
+    [SerializeField] AudioClip soundClip;
+    private float soundTimer = 0.5f;
 
     public bool muffled = false;
 
@@ -33,6 +35,10 @@ public class KnockableObject : MonoBehaviour
         lastRecordedVelocity = rb.velocity;
         // lastRecordedVelocity = rb.linearVelocity;
         // }
+
+        if(soundTimer > 0) {
+            soundTimer -= Time.deltaTime;
+        }
     }
 
     public void knockOver(float direction) {
@@ -71,6 +77,11 @@ public class KnockableObject : MonoBehaviour
             Debug.Log(awakenessValue);
         }
         Meter.instance.addValue(awakenessValue);
+        if(soundClip != null && previousVelocity.magnitude > 1 && soundTimer <= 0) {
+            float soundVolume = previousVelocity.magnitude * rb.mass * hardnessValue;
+            SoundFXManager.instance.PlaySoundFXClip(soundClip, transform, soundVolume);
+            soundTimer = 0.5f;
+        }
         // }
     }
 }

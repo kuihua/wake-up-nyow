@@ -5097,6 +5097,7 @@ MonoBehaviour:
   leftReach: {fileID: 2040059542}
   rightReach: {fileID: 913278614}
   meowClip: {fileID: 8300000, guid: 7f123a108277c164fbee33c9bbf29c63, type: 3}
+  jumpClip: {fileID: 8300000, guid: 4b76725b971fb2346915a795221487c9, type: 3}
 --- !u!95 &529790046
 Animator:
   serializedVersion: 5

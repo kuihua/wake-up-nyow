@@ -23,7 +23,7 @@ public class PlayerReach : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) {
             transform.parent.GetComponent<PlayerAnimation>().swipeAnimation();
-            SoundFXManager.instance.PlaySoundFXClip(swipeClip, transform, 1f);
+            SoundFXManager.instance.PlaySoundFXClip(swipeClip, transform, .5f);
             Vector2 playerVelocity = transform.parent.GetComponent<Rigidbody2D>().velocity;
             // Vector2 playerVelocity = transform.parent.GetComponent<Rigidbody2D>().linearVelocity;
             foreach (KnockableObject ko in objectsInReach)

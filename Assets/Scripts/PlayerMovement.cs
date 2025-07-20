@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sr;
     [SerializeField] private GameObject leftReach, rightReach;
 
+    [SerializeField] private AudioClip meowClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
         if((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
         && rb.velocity.y > 0) {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y/2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SoundFXManager.instance.PlaySoundFXClip(meowClip, transform, .5f);
         }
 
         // if ((Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))

@@ -7,6 +7,8 @@ public class KnockableObject : MonoBehaviour
     private Vector2 previousVelocity;
     private Vector2 lastRecordedVelocity;
 
+    [SerializeField] float hardnessValue = 1;
+
     public bool muffled = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -61,7 +63,7 @@ public class KnockableObject : MonoBehaviour
         // if(collision.gameObject.name == "Floor") {
         float awakenessValue = previousVelocity.magnitude * rb.mass
         // * 5 / Mathf.Pow(Vector2.Distance(transform.position, Meter.instance.humanPos.position), 2);
-        * 2 / Vector2.Distance(transform.position, Meter.instance.humanPos.position);
+        * hardnessValue / Vector2.Distance(transform.position, Meter.instance.humanPos.position);
         if(muffled) {
             awakenessValue /= 10;
         }

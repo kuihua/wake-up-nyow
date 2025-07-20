@@ -9,6 +9,8 @@ public class PlayerReach : MonoBehaviour
 
     private List<Interactable> interactables;
 
+    [SerializeField] private AudioClip swipeClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,7 @@ public class PlayerReach : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) {
             transform.parent.GetComponent<PlayerAnimation>().swipeAnimation();
+            SoundFXManager.instance.PlaySoundFXClip(swipeClip, transform, 1f);
             Vector2 playerVelocity = transform.parent.GetComponent<Rigidbody2D>().velocity;
             // Vector2 playerVelocity = transform.parent.GetComponent<Rigidbody2D>().linearVelocity;
             foreach (KnockableObject ko in objectsInReach)

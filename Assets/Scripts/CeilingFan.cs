@@ -11,6 +11,8 @@ public class CeilingFan : MonoBehaviour
     private Animator animator;
     private string currentState;
 
+    [SerializeField] private GameObject fanSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,11 +31,13 @@ public class CeilingFan : MonoBehaviour
 
     public void turnOn() {
         ChangeAnimationState("CeilingFan_On");
+        fanSound.SetActive(true);
         GetComponent<Collider2D>().enabled = true;
     }
 
     public void turnOff() {
         ChangeAnimationState("CeilingFan_Off");
+        fanSound.SetActive(false);
         GetComponent<Collider2D>().enabled = false;
     }
 

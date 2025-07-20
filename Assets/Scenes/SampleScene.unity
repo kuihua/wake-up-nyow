@@ -8393,6 +8393,8 @@ MonoBehaviour:
   fan: {fileID: 1464389547}
   switchOnClip: {fileID: 8300000, guid: a5d893495a8767644b6830a23a9a2e6e, type: 3}
   switchOffClip: {fileID: 8300000, guid: 02d80696a51420c488505c040268d8d2, type: 3}
+  switchOffSprite: {fileID: 21300000, guid: 312a466d385adb24d85893fddb7a8262, type: 3}
+  switchOnSprite: {fileID: 21300000, guid: 545fb84b995172142973e2a4e8d3abe0, type: 3}
 --- !u!1 &888088271
 GameObject:
   m_ObjectHideFlags: 0
@@ -10466,7 +10468,7 @@ Transform:
   m_GameObject: {fileID: 1115191611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.93, y: -3, z: 0}
+  m_LocalPosition: {x: -13.87, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12837,7 +12839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fanPos: {fileID: 1705183235}
   fanStrength: 12
-  fanSound: {fileID: 0}
+  fanSound: {fileID: 326452063}
 --- !u!61 &1464389548
 BoxCollider2D:
   m_ObjectHideFlags: 0

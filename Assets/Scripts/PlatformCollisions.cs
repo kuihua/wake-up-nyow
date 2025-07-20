@@ -15,7 +15,7 @@ public class PlatformCollisions : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        platforms = FindObjectsByType<Platform>(FindObjectsSortMode.None);
+        platforms = FindObjectsByType<Platform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
     }
 
     // // Update is called once per frame

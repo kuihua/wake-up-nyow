@@ -29,7 +29,7 @@ public class BallLauncher : Interactable
             SoundFXManager.instance.PlaySoundFXClip(ballLaunchClip, transform, 1f);
             GameObject ball = Instantiate(ballPrefab, ballSpawnPos.position, Quaternion.identity);
             ball.GetComponent<Rigidbody2D>().velocity = ballDirection.normalized * ballSpeed;
-            // ballsLeft--;
+            ballsLeft--;
             
             // GameObject ball = Instantiate(ballPrefab, ballSpawnPos.position, Quaternion.identity);
             // ball.GetComponent<Rigidbody2D>().linearVelocity = ballDirection.normalized * ballSpeed;

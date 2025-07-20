@@ -9,6 +9,8 @@ public class BallLauncher : Interactable
 
     float ballsLeft = 3;
 
+    [SerializeField] private AudioClip ballLaunchClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +26,7 @@ public class BallLauncher : Interactable
     public override void interact() {
         if (ballsLeft > 0)
         {
+            SoundFXManager.instance.PlaySoundFXClip(ballLaunchClip, transform, 1f);
             GameObject ball = Instantiate(ballPrefab, ballSpawnPos.position, Quaternion.identity);
             ball.GetComponent<Rigidbody2D>().velocity = ballDirection.normalized * ballSpeed;
             // ballsLeft--;

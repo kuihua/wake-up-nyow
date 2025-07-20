@@ -13,6 +13,7 @@ public class Meter : MonoBehaviour
 
     private bool awake = false;
     public Transform humanPos;
+    [SerializeField] private GameObject bedWake;
 
     void Awake() {
         if(instance == null) {
@@ -42,6 +43,7 @@ public class Meter : MonoBehaviour
             if(newValue > MAX_VALUE) {
                 newValue = MAX_VALUE;
                 awake = true;
+                bedWake.SetActive(true);
             }
             else if(newValue < minValue) {
                 newValue = minValue;

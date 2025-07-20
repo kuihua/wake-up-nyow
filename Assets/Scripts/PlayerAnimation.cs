@@ -37,6 +37,7 @@ public class PlayerAnimation : MonoBehaviour
             else {
                 ChangeAnimationState("Cat_Idle");
             }
+            swipe = false;
         }
     }
 

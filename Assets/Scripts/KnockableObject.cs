@@ -73,14 +73,18 @@ public class KnockableObject : MonoBehaviour
         if(muffled) {
             awakenessValue /= 10;
         }
-        if(previousVelocity != null) {
-            Debug.Log(awakenessValue);
-        }
+        // if(previousVelocity != null) {
+        //     Debug.Log(awakenessValue);
+        // }
         Meter.instance.addValue(awakenessValue);
         if(soundClip != null && previousVelocity.magnitude > 1 && soundTimer <= 0) {
-            float soundVolume = previousVelocity.magnitude * rb.mass * hardnessValue;
+            float soundVolume = previousVelocity.magnitude * rb.mass * hardnessValue / 10;
+            if(muffled) {
+                soundVolume /= 10;
+            }
             SoundFXManager.instance.PlaySoundFXClip(soundClip, transform, soundVolume);
-            soundTimer = 0.5f;
+            soundTimer = 0.2f;
+            Debug.Log(soundVolume);
         }
         // }
     }

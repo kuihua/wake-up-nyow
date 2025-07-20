@@ -5096,6 +5096,7 @@ MonoBehaviour:
     m_Bits: 64
   leftReach: {fileID: 2040059542}
   rightReach: {fileID: 913278614}
+  meowClip: {fileID: 8300000, guid: 7f123a108277c164fbee33c9bbf29c63, type: 3}
 --- !u!95 &529790046
 Animator:
   serializedVersion: 5
@@ -14227,7 +14228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hardnessValue: 0.7
-  soundClip: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: 26e085f1b8d0e464b9c55fbb9ca2e403, type: 3}
   muffled: 0
 --- !u!50 &1538101214
 Rigidbody2D:
@@ -17050,9 +17051,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4050623811074387128, guid: cda6a0ae285ea664780221540aff9287, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e97314f8d07c4e949a17ceb574d02f3a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d07976a8ce8f81a4790b6600410a203c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

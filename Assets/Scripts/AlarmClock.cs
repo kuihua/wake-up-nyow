@@ -22,7 +22,7 @@ public class AlarmClock : MonoBehaviour
     {
         timer += Time.deltaTime;
         if(!ringing && timer > ringCycleTime) {
-            SoundFXManager.instance.PlaySoundFXClip(alarmClip, transform, 1f);
+            SoundFXManager.instance.PlaySoundFXClip(alarmClip, transform, 0.75f);
             timer = 0;
             ringing = true;
             Meter.instance.addValue(30);

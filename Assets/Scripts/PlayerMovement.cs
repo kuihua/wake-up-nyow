@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject leftReach, rightReach;
 
     [SerializeField] private AudioClip meowClip;
+    [SerializeField] private AudioClip jumpClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,9 +45,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // jump
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        && isGrounded()) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        && isGrounded())
+        {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            SoundFXManager.instance.PlaySoundFXClip(jumpClip, transform, 0.1f);
             // rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 

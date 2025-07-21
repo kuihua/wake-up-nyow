@@ -161,4 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e8bb84a6e1ae94db663194cb23cd32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hardnessValue: 1
+  soundClip: {fileID: 8300000, guid: a9d60012aaa5c494f85e9318bc9a6a2d, type: 3}
   muffled: 0

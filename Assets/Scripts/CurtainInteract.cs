@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 public class CurtainInteract : Interactable
 {
     [SerializeField] private PlayableDirector playableDirector;
+    [SerializeField] float meterInc, meterMinInc;
 
     // // Start is called before the first frame update
     // void Start()
@@ -26,7 +27,7 @@ public class CurtainInteract : Interactable
     }
 
     public void increaseMeter() {
-        Meter.instance.addValue(30);
-        Meter.instance.increaseMinValue(20);
+        Meter.instance.addValue(meterInc);
+        Meter.instance.increaseMinValue(meterMinInc);
     }
 }

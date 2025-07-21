@@ -6,6 +6,7 @@ public class AlarmClock : MonoBehaviour
     float ringCycleTime = 60;
     float timer = 30;
     bool ringing = false;
+    [SerializeField] float meterInc;
     [SerializeField] private AudioClip alarmClip;
 
     private Animator animator;
@@ -25,13 +26,13 @@ public class AlarmClock : MonoBehaviour
             SoundFXManager.instance.PlaySoundFXClip(alarmClip, transform, 0.75f);
             timer = 0;
             ringing = true;
-            Meter.instance.addValue(30);
-            Meter.instance.increaseMinValue(30);
+            Meter.instance.addValue(meterInc);
+            Meter.instance.increaseMinValue(meterInc);
             ChangeAnimationState("AlarmClock_Ring");
         }
         else if(ringing && timer > timeItRingsFor) {
             ringing = false;
-            Meter.instance.increaseMinValue(-30);
+            Meter.instance.increaseMinValue(-meterInc);
             ChangeAnimationState("AlarmClock_Normal");
         }
     }
